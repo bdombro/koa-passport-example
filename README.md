@@ -1,34 +1,19 @@
 # Koa example/boilerplate
 
-This repository demonstrates the usage of Sequelize within an [Koa](https://koajs.com) application.
+This repository demonstrates the usage of pg and raw SQL within an [Koa](https://koajs.com) application.
 
 
 ## Starting App
 
-First of all, don't forget to edit `/config/config.js`, create database then run:
+Run docker container with databse then run:
 
 ```
-npm install
-npm start
+yarn install
+yarn dev
 ```
 
 This will start the application and create database tables.
 Just open [http://localhost:3000](http://localhost:3000).
-
-
-## Sequelize Setup
-
-Now we will install all sequelize related modules.
-
-```bash
-# install ORM , CLI and SQLite dialect
-npm install --save sequelize sequelize-cli mysql2
-
-# generate models
-node_modules/.bin/sequelize init
-node_modules/.bin/sequelize model:generate --name User --attributes firstName:string,lastName:string,email:string
-```
-
 
 ## Authentication
 

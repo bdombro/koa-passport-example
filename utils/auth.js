@@ -99,8 +99,8 @@ passport.use(new FacebookStrategy({
     profileFields: ['id', 'displayName', 'name', 'photos', 'email']
   },
   async (token, tokenSecret, profile, done) => {
-     // Retrieve user from database, if exists
-     const user = await User.findOne(profile.emails[0].value)
+    // Retrieve user from database, if exists
+    const user = await User.findOne(profile.emails[0].value)
     if (user) {
       done(null, user)
     } else {
